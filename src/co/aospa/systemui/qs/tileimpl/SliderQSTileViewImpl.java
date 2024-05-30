@@ -65,7 +65,7 @@ public class SliderQSTileViewImpl extends QSTileViewImpl {
         super(context, icon, collapsed);
         if (touchListener != null && !settingKey.isEmpty()) {
             mSettingsKey = settingKey;
-            percentageDrawable = new PercentageDrawable();
+            percentageDrawable = new PercentageDrawable(settingsDefaultValue);
             percentageDrawable.setTint(Color.WHITE);
             updatePercentBackground(false /* default */);
             mSettingObserver = new SettingObserver(new Handler(Looper.getMainLooper()));
